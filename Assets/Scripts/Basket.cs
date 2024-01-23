@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Basket : MonoBehaviour
+[CreateAssetMenu(fileName = "Basket", menuName = "Objects/Basket")]
+public class Basket : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int Id;
+    public Sprite sprite;
+    public List<Good> GoodsInBasket = new List<Good>();
 
-    // Update is called once per frame
-    void Update()
+    int CalculateBonus()
     {
-        
+        int bonus = 0;
+        bonus += 10 * GoodsInBasket.FindAll(goods => goods.IsFunny).Count;
+
+        return bonus;
     }
 }
