@@ -7,6 +7,13 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.cysharp.unitask": {
+      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "66de0d3a58b256b6e0194f285cc530fd0c08407b"
+    },
     "com.esotericsoftware.spine.spine-csharp": {
       "version": "https://github.com/EsotericSoftware/spine-runtimes.git?path=spine-csharp/src#4.1",
       "depth": 0,
@@ -22,6 +29,13 @@
         "com.esotericsoftware.spine.spine-csharp": "4.1.0"
       },
       "hash": "2c6d10bef88b84c78dc3cec5f36dd3574a6581db"
+    },
+    "com.neuecc.unirx": {
+      "version": "https://github.com/neuecc/UniRx.git?path=Assets/Plugins/UniRx/Scripts",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "7cce378b3f8c8943b4cac8e847bdbb8e2e1802d1"
     },
     "com.unity.2d.animation": {
       "version": "9.0.4",
