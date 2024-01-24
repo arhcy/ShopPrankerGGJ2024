@@ -17,6 +17,9 @@ namespace Core
         [SerializeField]
         private MenuView _menuView;
 
+        [SerializeField]
+        private Good_Repository _goodRepository;
+
         private GlobalGameData _gameData;
         private StageManagerSetup _stageManagerSetup;
 

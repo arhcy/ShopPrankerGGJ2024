@@ -254,6 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stageManager: {fileID: 1272753510}
   _menuView: {fileID: 977903502}
+  _goodRepository: {fileID: 11400000, guid: 5ba7d7e6c8953eb4dad3ba7dc57e1180, type: 2}
 --- !u!4 &1272753512
 Transform:
   m_ObjectHideFlags: 0
