@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 [Serializable]
-public class Good
+public class GoodData
 {
 
     public int Id;
