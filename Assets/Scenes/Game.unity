@@ -262,7 +262,8 @@ MonoBehaviour:
   _menuView: {fileID: 977903502}
   _goodRepository: {fileID: 11400000, guid: 5ba7d7e6c8953eb4dad3ba7dc57e1180, type: 2}
   _introPresenter: {fileID: 6074393612753876925}
-  InitialStage: 0
+  _cashierView: {fileID: 9191180188607545749}
+  InitialStage: 3
   InitFromStage: 1
 --- !u!4 &1272753512
 Transform:
@@ -468,10 +469,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuStage
       objectReference: {fileID: 0}
-    - target: {fileID: 4037812600937196559, guid: 4420cba465c13024d8e9055f771fed66, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -489,10 +486,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1555585389}
-    - target: {fileID: 3307930343008149443, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3313740797391020774, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -573,17 +566,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3539095663325719269, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3579037033263712300, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
       propertyPath: m_Name
       value: IntroStage
-      objectReference: {fileID: 0}
-    - target: {fileID: 3579037033263712300, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -799,15 +784,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: CashierStage
       objectReference: {fileID: 0}
-    - target: {fileID: 721131008194608699, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 5256021285537263442, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
+--- !u!114 &9191180188607545749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7583319408496835410, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
+  m_PrefabInstance: {fileID: 8468980066218877137}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100743743926847270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13714fa12b049848261a6cc7a84b2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
