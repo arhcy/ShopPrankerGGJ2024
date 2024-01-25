@@ -15,7 +15,7 @@ namespace Menu
         )
         {
             _button.onClick.AddListener(
-                () => data.GameStage.Value = GameStage.Selection
+                () => data.GameStage.Value = GameStage.Intro
             );
         }
     }

@@ -1,0 +1,5 @@
+arrow.png
+size:192,212
+filter:Linear,Linear
+arrow
+bounds:2,2,187,206

@@ -7,9 +7,13 @@ namespace LevelManagement
     {
         public StageManagerSetup(
             StageManager manager,
-            GlobalGameData globalGameData
+            GlobalGameData globalGameData,
+            GameStage? forceStage
         )
         {
+            if (forceStage.HasValue)
+                globalGameData.GameStage.Value = forceStage.Value;
+
             globalGameData.GameStage.Subscribe(manager.ShowStage);
         }
     }
