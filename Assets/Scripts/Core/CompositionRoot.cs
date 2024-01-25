@@ -1,11 +1,7 @@
-﻿using System;
-using Cinemachine;
-using GameData;
+﻿using GameData;
 using LevelManagement;
 using Menu;
-using UnityEditor.SceneManagement;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Core
 {
