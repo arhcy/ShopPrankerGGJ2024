@@ -1,4 +1,5 @@
-﻿using CashierStage.Data;
+﻿using CashierStage;
+using CashierStage.Data;
 using CashierStage.Model;
 using CashierStage.Presenter;
 using CashierStage.View;
@@ -29,6 +30,9 @@ namespace Core
         [SerializeField]
         private CashierView _cashierView;
 
+        [SerializeField]
+        private CashierStageMechanics _cashierStageMechanics;
+
         private GlobalGameData _gameData;
         private StageManagerSetup _stageManagerSetup;
         private CashierStageData _cashierStageData;
@@ -50,10 +54,10 @@ namespace Core
             _menuView.Construct(_gameData);
             _introPresenter.Construct(_gameData);
             _cashierStageData = new CashierStageData();
-            _cashierStagePresenter = new CashierStagePresenter(_gameData, _cashierStageData, _cashierView);
-            _cashierStageModel = new CashierStageModel(_gameData, _cashierStageData);
+            //_cashierStagePresenter = new CashierStagePresenter(_gameData, _cashierStageData, _cashierView);
+            //_cashierStageModel = new CashierStageModel(_gameData, _cashierStageData);
             _selectionView.Construct(_gameData);
-
+            _cashierStageMechanics.Construct(_gameData, _cashierStageData);
         }
     }
 }

@@ -2,6 +2,7 @@
 using UnityEngine;
 using System;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Spine;
@@ -40,7 +41,7 @@ namespace CashierStage.View
 
         public int CharacterId;
 
-        public void PlayAnimation(CharacterState state, Action onComplete = null)
+        public void PlayAnimation(CharacterState state, bool isLoop, Action onComplete = null)
         {
             _skeletonAnimation.AnimationName = GetAnimName(state);
 
@@ -48,27 +49,52 @@ namespace CashierStage.View
 
             var animState = _skeletonAnimation.state;
             animState.Complete += Completed;
+            _skeletonAnimation.loop = isLoop;
 
             void Completed(TrackEntry entry)
             {
                 animState.Complete -= Completed;
                 onComplete?.Invoke();
             }
-        }        
-        
-        public async Task PlayAnimationAsync(CharacterState state)
+        }
+
+        public async Task PlayAnimationAsync(CharacterState state, float loopTime = -1)
         {
-            _skeletonAnimation.AnimationName = GetAnimName(state);
-
+            var name = GetAnimName(state);
             var animState = _skeletonAnimation.state;
-            animState.Complete += Completed;
             var completed = false;
+            var animationObject = _skeletonAnimation.skeletonDataAsset.GetSkeletonData(false).FindAnimation(name);
 
-            await UniTask.WaitUntil(() => completed);
+            if (animationObject != null)
+                animState.SetAnimation(0, animationObject, loopTime > 0);
+
+            if (loopTime < 0)
+            {
+                _skeletonAnimation.loop = false;
+                animState.Complete += Completed;
+                animState.End += Completed;
+                animState.Interrupt += Completed;
+            }
+            else
+            {
+                _skeletonAnimation.loop = true;
+            }
+
+            var token = new CancellationTokenSource(new TimeSpan(0, 0, 0, 0, (int)(loopTime > 0 ? loopTime * 1000 : 30 * 1000)));
+
+            await UniTask.WaitUntil(() => completed || token.IsCancellationRequested);
+
+            if (!completed)
+                Completed(default);
+
+            token.Dispose();
+            _skeletonAnimation.loop = false;
 
             void Completed(TrackEntry entry)
             {
                 animState.Complete -= Completed;
+                animState.End -= Completed;
+                animState.Interrupt += Completed;
                 completed = true;
             }
         }

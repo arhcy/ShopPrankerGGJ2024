@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efc784cf74434fdc98a6b3f70c3f0482, type: 3}
+  m_Name: CashierSettings
+  m_EditorClassIdentifier: 
+  StartDelay: 2
+  BasketAppearDuration: 0.3
+  BasketAppearPunchMagnitude: 0.1
+  BasketAppearPunchVibration: 1
+  BasketAppearPunchDuration: 0.3
+  BasketDisappearDuration: 0.5
+  CashierLookTime: 3
+  CashierLaughTime: 3
+  GoodsUnpackDuration: 0.3

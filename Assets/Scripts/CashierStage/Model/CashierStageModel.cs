@@ -20,7 +20,7 @@ namespace CashierStage.Model
 
             _gameData.GameStage.Where(a => a == GameStage.Cashier).Subscribe(a => StageEntered());
 
-            void StageEntered()
+            async void StageEntered()
             {
                 _cashierData.CashierState.Value = CharacterState.Idle;
             }

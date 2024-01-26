@@ -2566,7 +2566,8 @@ MonoBehaviour:
   _goodRepository: {fileID: 11400000, guid: 5ba7d7e6c8953eb4dad3ba7dc57e1180, type: 2}
   _introPresenter: {fileID: 6074393612753876925}
   _cashierView: {fileID: 9191180188607545749}
-  InitialStage: 0
+  _cashierStageMechanics: {fileID: 9191180188607545754}
+  InitialStage: 3
   InitFromStage: 1
 --- !u!4 &1272753512
 Transform:
@@ -5212,6 +5213,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b13714fa12b049848261a6cc7a84b2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9191180188607545754 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6719541150828918464, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
+  m_PrefabInstance: {fileID: 8468980066218877137}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100743743926847270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdd3273ddb0344a7b8bb5cff1cf4e850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
