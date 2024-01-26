@@ -18,6 +18,9 @@ namespace Core
         private MenuView _menuView;
 
         [SerializeField]
+        private SelectionView _selectionView;
+
+        [SerializeField]
         private Good_Repository _goodRepository;
 
         [SerializeField]
@@ -49,6 +52,8 @@ namespace Core
             _cashierStageData = new CashierStageData();
             _cashierStagePresenter = new CashierStagePresenter(_gameData, _cashierStageData, _cashierView);
             _cashierStageModel = new CashierStageModel(_gameData, _cashierStageData);
+            _selectionView.Construct(_gameData);
+
         }
     }
 }
