@@ -15,7 +15,129 @@ MonoBehaviour:
   goods:
   - Id: 1
     Name: Cucumber
-    Level: 0
+    Level: 1
     Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
     IsFunny: 1
     GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 2
+    Name: Cucumber
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 901f578a9a20cb347b1c2560a0b1bce0, type: 3}
+    IsFunny: 1
+    GroupName: vegetables
+    ScaleX: 0.5
+    ScaleY: 0.5
+  - Id: 3
+    Name: Cucumber
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 1
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 4
+    Name: Cucumber
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 1
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 5
+    Name: Cucumber
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 1
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 6
+    Name: Cucumber
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 1
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 7
+    Name: Cucumber
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 1
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 8
+    Name: Cucumber
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 1
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 9
+    Name: Cucumber
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 1
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 10
+    Name: Cucumber
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 1
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 11
+    Name: Cucumber
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 1
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 12
+    Name: Cucumber
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 1
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 13
+    Name: Cucumber
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 1
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 14
+    Name: Cucumber
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 1
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 15
+    Name: Cucumber
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 1
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 16
+    Name: Cucumber
+    Level: 2
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 1
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1

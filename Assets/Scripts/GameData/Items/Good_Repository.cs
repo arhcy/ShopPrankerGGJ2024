@@ -6,7 +6,7 @@ using UnityEngine;
 public class Good_Repository : ScriptableObject
 {
     public List<GoodData> goods = new List<GoodData>();
-    List<GoodData> Provide(int level)
+    public List<GoodData> Provide(int level)
     {
         return goods.FindAll(goods => goods.Level == level); 
     }
