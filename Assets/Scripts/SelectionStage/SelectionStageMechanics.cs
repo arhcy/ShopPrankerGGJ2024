@@ -25,7 +25,6 @@ namespace SelectionStage
             globalGameData.PlayerLevel.Subscribe(_shelvesSet.Setup);
             globalGameData.GameStage.Where(a => a == GameStage.Selection).Subscribe(a => _shelvesSet.Setup(globalGameData.PlayerLevel.Value));
 
-
             foreach (var good in Object.FindObjectsOfType<GoodView>(true))
                 good.OnEndDragHappen += UpdateBasketsData;
             
