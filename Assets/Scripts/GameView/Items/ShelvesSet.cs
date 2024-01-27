@@ -11,15 +11,14 @@ public class ShelvesSet : MonoBehaviour
     
     public List<GoodView> Goods;
     public Good_Repository good_rep;
-    public int level;
-    // Start is called before the first frame update
-    void Start()
+    
+    public void Setup(int level)
     {
-        var good = good_rep.Provide(level);
-        Debug.Log(good[0].Name);
-        for (int i = 0; i < good.Count && i < Goods.Count; i++)
+        var good = good_rep.Provide(level+1);
+        for (int i = 0; i < good.Count; i++)
         {
-           Goods[i].good = good[i];
+            Goods[i].ResetGood();
+            Goods[i].SetGood(good[i]);
         }
     }
 

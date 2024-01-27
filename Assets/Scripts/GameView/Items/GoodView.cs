@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,21 +9,29 @@ namespace GameView.Items
 {
     public class GoodView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
-        public GoodData good;
+        public GoodData good { get; private set; }  
+        [SerializeField]
         public Image image;
         public int BusketId;
         [HideInInspector] public Transform parentAfterDrug;
-        void Start()
+        
+        private Vector3 _orginalPos;
+        private Transform _originalParent;
+
+        private void Awake()
         {
-            //image.sprite = good.Sprite;
-            //image.transform.localScale = new Vector3(good.ScaleX, good.ScaleY, 1);
+            _orginalPos = transform.position;
+            _originalParent = transform.parent;
         }
-        void Update()
+
+        public void ResetGood()
         {
-            image.sprite = good.Sprite;
-            image.transform.localScale = new Vector3(good.ScaleX, good.ScaleY, 1);
-            Debug.Log(BusketId);
+            Debug.LogError(_originalParent);
+            if(_originalParent==null)return;
+            transform.SetParent(_originalParent);
+            transform.position = _orginalPos;
         }
+
         public void OnBeginDrag(PointerEventData eventData)
         {
             Debug.Log("Begin drag");
@@ -44,6 +53,17 @@ namespace GameView.Items
             Debug.Log("End drag");
             transform.SetParent(parentAfterDrug);
             image.raycastTarget = true;
+        }
+
+        public void SetGood(GoodData goodData)
+        {
+            good = goodData;
+            if (image == null)
+                image = GetComponent<Image>();
+
+            image.sprite = good.Sprite;
+
+            image.transform.localScale = new Vector3(good.ScaleX, good.ScaleY, 1);
         }
     }
 
