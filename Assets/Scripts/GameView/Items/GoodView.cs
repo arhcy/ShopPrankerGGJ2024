@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -27,9 +28,9 @@ namespace GameView.Items
         {
             Debug.Log("Begin drag");
             parentAfterDrug = transform.parent;
-            transform.SetParent(transform.root);
             transform.SetAsLastSibling();
             image.raycastTarget = false;
+            BusketId = 0;
         }
 
         public void OnDrag(PointerEventData eventData)

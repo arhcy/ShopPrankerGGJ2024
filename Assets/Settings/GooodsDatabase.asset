@@ -14,122 +14,226 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goods:
   - Id: 1
-    Name: Cucumber
+    Name: Vaseline
     Level: 1
-    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
-    IsFunny: 1
-    GroupName: vegetables
-    ScaleX: 1
-    ScaleY: 1
-  - Id: 2
-    Name: Cucumber
-    Level: 1
-    Sprite: {fileID: 21300000, guid: 901f578a9a20cb347b1c2560a0b1bce0, type: 3}
-    IsFunny: 1
-    GroupName: vegetables
+    Sprite: {fileID: 21300000, guid: 95abf3c1f09036b448b72544443cdd2c, type: 3}
+    IsFunny: 0
+    GroupName: set_for_ass
     ScaleX: 0.5
+    ScaleY: 1
+  - Id: 6
+    Name: Saw
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 5eef0767f3d4c2440b16dc2aaba51e1f, type: 3}
+    IsFunny: 0
+    GroupName: good_film
+    ScaleX: 1.5
+    ScaleY: 0.75
+  - Id: 2
+    Name: Carrot
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 5b5fd9eb98a7eb24db0721a0eb681cf0, type: 3}
+    IsFunny: 0
+    GroupName: set_for_ass
+    ScaleX: 0.85
+    ScaleY: 0.425
+  - Id: 4
+    Name: Zucchini
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 068e743bf20f4e3489e84f2edd77a2fc, type: 3}
+    IsFunny: 0
+    GroupName: set_for_ass
+    ScaleX: 1
+    ScaleY: 0.75
+  - Id: 7
+    Name: Tape
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 62d7a8c7d9d842f4fbe1b0dde18e4a22, type: 3}
+    IsFunny: 0
+    GroupName: good_film
+    ScaleX: 0.5525
+    ScaleY: 0.85
+  - Id: 10
+    Name: Fatty_bacon
+    Level: 1
+    Sprite: {fileID: 21300000, guid: e5f85bfba5f774f4ba259b28261e6111, type: 3}
+    IsFunny: 0
+    GroupName: not_do_it
+    ScaleX: 0.75
+    ScaleY: 0.6
+  - Id: 5
+    Name: Garbage_bags
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 002be5151f142b84b9828c7a59111373, type: 3}
+    IsFunny: 0
+    GroupName: good_film
+    ScaleX: 0.75
+    ScaleY: 0.375
+  - Id: 9
+    Name: Rope
+    Level: 1
+    Sprite: {fileID: 21300000, guid: a8a5c243e48a5ba4ca7abd7bc7c5156f, type: 3}
+    IsFunny: 0
+    GroupName: not_do_it
+    ScaleX: 0.9
+    ScaleY: 0.9
+  - Id: 15
+    Name: Champagne
+    Level: 1
+    Sprite: {fileID: 21300000, guid: 0676534652f3c3645a2367a632120d0a, type: 3}
+    IsFunny: 0
+    GroupName: this_is_a_crime
+    ScaleX: 1
     ScaleY: 0.5
   - Id: 3
     Name: Cucumber
     Level: 1
-    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
-    IsFunny: 1
-    GroupName: vegetables
-    ScaleX: 1
-    ScaleY: 1
-  - Id: 4
-    Name: Cucumber
+    Sprite: {fileID: 21300000, guid: d16b410e403560c4aa4da0d9131e4582, type: 3}
+    IsFunny: 0
+    GroupName: set_for_ass
+    ScaleX: 0.85
+    ScaleY: 0.375
+  - Id: 14
+    Name: Pie
     Level: 1
-    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
-    IsFunny: 1
-    GroupName: vegetables
+    Sprite: {fileID: 21300000, guid: a80885d819f04cb4b98c2d44f90ba470, type: 3}
+    IsFunny: 0
+    GroupName: dont_joke_that
     ScaleX: 1
-    ScaleY: 1
-  - Id: 5
-    Name: Cucumber
+    ScaleY: 0.85
+  - Id: 12
+    Name: Condoms
     Level: 1
-    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    Sprite: {fileID: 21300000, guid: 901f578a9a20cb347b1c2560a0b1bce0, type: 3}
     IsFunny: 1
-    GroupName: vegetables
-    ScaleX: 1
-    ScaleY: 1
-  - Id: 6
-    Name: Cucumber
-    Level: 1
-    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
-    IsFunny: 1
-    GroupName: vegetables
-    ScaleX: 1
-    ScaleY: 1
-  - Id: 7
-    Name: Cucumber
-    Level: 1
-    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
-    IsFunny: 1
-    GroupName: vegetables
-    ScaleX: 1
-    ScaleY: 1
+    GroupName: always_funny
+    ScaleX: 0.5
+    ScaleY: 0.5
   - Id: 8
-    Name: Cucumber
+    Name: Shovel
     Level: 1
-    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
-    IsFunny: 1
-    GroupName: vegetables
-    ScaleX: 1
-    ScaleY: 1
-  - Id: 9
-    Name: Cucumber
+    Sprite: {fileID: 21300000, guid: ca572e070d5e3964480cdb175a86306f, type: 3}
+    IsFunny: 0
+    GroupName: good_film
+    ScaleX: 1.25
+    ScaleY: 0.5
+  - Id: 13
+    Name: Whipped_cream
     Level: 1
-    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
-    IsFunny: 1
-    GroupName: vegetables
-    ScaleX: 1
-    ScaleY: 1
-  - Id: 10
-    Name: Cucumber
-    Level: 1
-    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
-    IsFunny: 1
-    GroupName: vegetables
-    ScaleX: 1
+    Sprite: {fileID: 21300000, guid: 8904c4a8de847c44eb89af5b26976e1c, type: 3}
+    IsFunny: 0
+    GroupName: you_pregnant
+    ScaleX: 0.35
     ScaleY: 1
   - Id: 11
-    Name: Cucumber
+    Name: Chair
     Level: 1
+    Sprite: {fileID: 21300000, guid: 91ab76a66ef51c7428825d0b400eec40, type: 3}
+    IsFunny: 0
+    GroupName: not_do_it
+    ScaleX: 1.125
+    ScaleY: 1.125
+  - Id: 16
+    Name: Wet_wipes
+    Level: 2
+    Sprite: {fileID: 21300000, guid: a46c2d5ba99f67c4ea901b082b8508cf, type: 3}
+    IsFunny: 0
+    GroupName: hand_work
+    ScaleX: 0.95
+    ScaleY: 0.8
+  - Id: 17
+    Name: Hand_lotion
+    Level: 2
+    Sprite: {fileID: 21300000, guid: 39f51be918d02864485c7c052fd0ab75, type: 3}
+    IsFunny: 0
+    GroupName: hand_work
+    ScaleX: 0.5
+    ScaleY: 1
+  - Id: 18
+    Name: Disk
+    Level: 2
+    Sprite: {fileID: 21300000, guid: 2bc467eb48962184bb3b42a75b8dbdbb, type: 3}
+    IsFunny: 0
+    GroupName: hand_work
+    ScaleX: 0.8
+    ScaleY: 0.9
+  - Id: 19
+    Name: Pie
+    Level: 2
+    Sprite: {fileID: 21300000, guid: a80885d819f04cb4b98c2d44f90ba470, type: 3}
+    IsFunny: 0
+    GroupName: dont_joke_that
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 20
+    Name: Cucumber
+    Level: 2
     Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
-    IsFunny: 1
+    IsFunny: 0
     GroupName: vegetables
     ScaleX: 1
     ScaleY: 1
-  - Id: 12
+  - Id: 21
     Name: Cucumber
-    Level: 1
+    Level: 2
     Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
-    IsFunny: 1
+    IsFunny: 0
     GroupName: vegetables
     ScaleX: 1
     ScaleY: 1
-  - Id: 13
+  - Id: 22
     Name: Cucumber
-    Level: 1
+    Level: 2
     Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
-    IsFunny: 1
+    IsFunny: 0
     GroupName: vegetables
     ScaleX: 1
     ScaleY: 1
-  - Id: 14
+  - Id: 23
     Name: Cucumber
-    Level: 1
+    Level: 2
     Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
-    IsFunny: 1
+    IsFunny: 0
     GroupName: vegetables
     ScaleX: 1
     ScaleY: 1
-  - Id: 15
+  - Id: 24
     Name: Cucumber
-    Level: 1
+    Level: 2
     Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
-    IsFunny: 1
+    IsFunny: 0
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 25
+    Name: Cucumber
+    Level: 2
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 0
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 26
+    Name: Cucumber
+    Level: 2
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 0
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 27
+    Name: Cucumber
+    Level: 2
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 0
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 28
+    Name: Cucumber
+    Level: 2
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 0
     GroupName: vegetables
     ScaleX: 1
     ScaleY: 1
@@ -137,7 +241,23 @@ MonoBehaviour:
     Name: Cucumber
     Level: 2
     Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
-    IsFunny: 1
+    IsFunny: 0
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 29
+    Name: Cucumber
+    Level: 2
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 0
+    GroupName: vegetables
+    ScaleX: 1
+    ScaleY: 1
+  - Id: 30
+    Name: Cucumber
+    Level: 3
+    Sprite: {fileID: 21300000, guid: 8a30a4a3d178eca4f89926067c59dd99, type: 3}
+    IsFunny: 0
     GroupName: vegetables
     ScaleX: 1
     ScaleY: 1
