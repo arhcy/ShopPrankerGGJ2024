@@ -2568,7 +2568,7 @@ MonoBehaviour:
   _introPresenter: {fileID: 6074393612753876925}
   _cashierView: {fileID: 9191180188607545749}
   _cashierStageMechanics: {fileID: 9191180188607545754}
-  InitialStage: 3
+  InitialStage: 0
   InitFromStage: 1
 --- !u!4 &1272753512
 Transform:
@@ -4907,6 +4907,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1147812770544273533, guid: 4420cba465c13024d8e9055f771fed66, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2665549671864932205, guid: 4420cba465c13024d8e9055f771fed66, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4995,6 +4999,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6554430987796924455, guid: 4420cba465c13024d8e9055f771fed66, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5008,6 +5016,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 439290534396142379, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2967664428392319410, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
       propertyPath: m_Camera
       value: 
@@ -5104,7 +5116,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntroStage
       objectReference: {fileID: 0}
-    - target: {fileID: 3579037033263712300, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
+    - target: {fileID: 8474906326260208421, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -5217,18 +5229,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 461157465537486739, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 721131008194608699, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
       propertyPath: m_Name
       value: CashierStage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357934517125693473, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550110585800931176, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865471307347560176, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644452216503243774, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5256021285537263442, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6719541150828918464, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
+      propertyPath: _slider
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719541150828918464, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
       propertyPath: _cameraZoomController
       value: 
       objectReference: {fileID: 1272753513}
+    - target: {fileID: 8144713888278775894, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8734034542335736307, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795594101785956906, guid: 60cb92a6e4c7f8c4f9c30b5d1d64826a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
