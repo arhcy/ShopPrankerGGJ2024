@@ -21,7 +21,7 @@ namespace CashierStage.View
         Looking
     }
 
-    public class CashierView : MonoBehaviour
+    public class CashierView : BaseAnimController
     {
         [Serializable]
         public struct AnimNameBinder
@@ -29,9 +29,6 @@ namespace CashierStage.View
             public CharacterState State;
             public string AnimName;
         }
-
-        [SerializeField]
-        private SkeletonAnimation _skeletonAnimation;
 
         [SerializeField]
         private string[] _characterPrefixes;
@@ -43,57 +40,15 @@ namespace CashierStage.View
 
         public void PlayAnimation(CharacterState state, bool isLoop)
         {
-            
             var name = GetAnimName(state);
-            _skeletonAnimation.AnimationName = name;
-            var animState = _skeletonAnimation.state;
-            var animationObject = _skeletonAnimation.skeletonDataAsset.GetSkeletonData(false).FindAnimation(name);
-
-            if (animationObject != null)
-                animState.SetAnimation(0, animationObject, isLoop);
-
-            _skeletonAnimation.loop = isLoop;
+            PlayAnimation(name, isLoop);
         }
 
-        public async Task PlayAnimationAsync(CharacterState state, float loopTime = -1)
+        public Task PlayAnimationAsync(CharacterState state, float loopTime = -1)
         {
             var name = GetAnimName(state);
-            var animState = _skeletonAnimation.state;
-            var completed = false;
-            var animationObject = _skeletonAnimation.skeletonDataAsset.GetSkeletonData(false).FindAnimation(name);
 
-            if (animationObject != null)
-                animState.SetAnimation(0, animationObject, loopTime > 0);
-
-            if (loopTime < 0)
-            {
-                _skeletonAnimation.loop = false;
-                animState.Complete += Completed;
-                animState.End += Completed;
-                animState.Interrupt += Completed;
-            }
-            else
-            {
-                _skeletonAnimation.loop = true;
-            }
-
-            var token = new CancellationTokenSource(new TimeSpan(0, 0, 0, 0, (int)(loopTime > 0 ? loopTime * 1000 : 30 * 1000)));
-
-            await UniTask.WaitUntil(() => completed || token.IsCancellationRequested);
-
-            if (!completed)
-                Completed(default);
-
-            token.Dispose();
-            _skeletonAnimation.loop = false;
-
-            void Completed(TrackEntry entry)
-            {
-                animState.Complete -= Completed;
-                animState.End -= Completed;
-                animState.Interrupt += Completed;
-                completed = true;
-            }
+            return PlayAnimationAsync(name, loopTime);
         }
 
         private string GetAnimName(CharacterState state) =>

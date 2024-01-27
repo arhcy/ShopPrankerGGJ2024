@@ -6,5 +6,6 @@
         public const int WinBonus = 50;
         public const int AdditionalBonus = 10;
         public const int TotalCashierPasses = 2;
+        public const int TotalLevels = 3;
     }
 }

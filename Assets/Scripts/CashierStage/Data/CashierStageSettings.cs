@@ -22,6 +22,7 @@ namespace CashierStage.Data
         public float CashierZoomDuraiton = 3;
         public float CashierZoomLevel = 3;
         public float ZoomLooseDelay = 3;
+        public float DelayBeforeFinal = 2;
         
         [Header("Goods:")]
         public float GoodsUnpackDuration = 1;

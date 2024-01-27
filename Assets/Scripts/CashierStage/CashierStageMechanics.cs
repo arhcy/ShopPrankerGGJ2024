@@ -37,6 +37,12 @@ namespace CashierStage
         [SerializeField]
         private FunSlider _slider;
 
+        [SerializeField]
+        private EndLevelView _endLevelView;
+
+        [SerializeField]
+        private GameObject _totalWinView;
+
         private GlobalGameData _globalGameData;
         private CashierStageData _data;
 
@@ -80,8 +86,7 @@ namespace CashierStage
                 _data.Pass++;
             }
 
-            ProcessFinalData();
-            _globalGameData.GameStage.Value = GameStage.Intro;
+            await ProcessFinalData();
         }
 
         private async Task MechanicsPass()
@@ -132,19 +137,27 @@ namespace CashierStage
             _data.Pass = 0;
             _data.Wons.Value = 0;
         }
-        
-        private void ProcessFinalData()
+
+        private async Task ProcessFinalData()
         {
-            if (_data.Wons.Value == GameSettings.TotalCashierPasses)
+            await UniTask.Delay((int)(_settings.DelayBeforeFinal * 1000));
+        
+            var won = _data.Wons.Value == GameSettings.TotalCashierPasses;
+
+            if (won)
             {
                 _globalGameData.PlayerLevel.Value += 1;
-                //show won popup
-                
+
+                if (_globalGameData.PlayerLevel.Value >= GameSettings.TotalLevels)
+                {
+                    
+                    _totalWinView.gameObject.SetActive(true);
+                    return;
+                }
             }
-            else
-            {
-                //show loose popup
-            }
+
+            await _endLevelView.Play(won);
+            _globalGameData.GameStage.Value = GameStage.Selection;
         }
 
         private void SetupMocks()
