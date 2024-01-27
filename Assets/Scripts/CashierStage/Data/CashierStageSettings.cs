@@ -25,5 +25,11 @@ namespace CashierStage.Data
         
         [Header("Goods:")]
         public float GoodsUnpackDuration = 1;
+
+        [Header("Slider:")]
+        public float SliderMoveTime = 1;
+        public float SliderMPunchMagnitude = 1;
+        public int SliderMPunchVibration = 1;
+        public float SliderMPunchDuration = 1;
     }
 }

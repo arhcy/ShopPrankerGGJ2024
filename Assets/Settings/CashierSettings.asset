@@ -24,3 +24,7 @@ MonoBehaviour:
   CashierZoomLevel: 0.8
   ZoomLooseDelay: 1.5
   GoodsUnpackDuration: 0.3
+  SliderMoveTime: 1
+  SliderMPunchMagnitude: 1
+  SliderMPunchVibration: 2
+  SliderMPunchDuration: 0.5

@@ -34,6 +34,9 @@ namespace CashierStage
         [SerializeField]
         private CameraZoomController _cameraZoomController;
 
+        [SerializeField]
+        private FunSlider _slider;
+
         private GlobalGameData _globalGameData;
         private CashierStageData _data;
 
@@ -52,6 +55,7 @@ namespace CashierStage
             _data = cashierStageData;
 
             _globalGameData.GameStage.Where(a => a == GameStage.Cashier).Subscribe(a => RunMechanics());
+            _data.Wons.Subscribe(async wons => await _slider.SlideAsync(wons, wons == 0));
         }
 
         private async void RunMechanics()
@@ -104,7 +108,7 @@ namespace CashierStage
 
                 if (won)
                 {
-                    _data.Wons++;
+                    _data.Wons.Value++;
 
                     if (Pass == GameSettings.TotalCashierPasses - 1)
                         await _cashier.PlayAnimationAsync(CharacterState.Laugh3_in);
@@ -126,12 +130,12 @@ namespace CashierStage
         private void ResetData()
         {
             _data.Pass = 0;
-            _data.Wons = 0;
+            _data.Wons.Value = 0;
         }
         
         private void ProcessFinalData()
         {
-            if (_data.Wons == GameSettings.TotalCashierPasses)
+            if (_data.Wons.Value == GameSettings.TotalCashierPasses)
             {
                 _globalGameData.PlayerLevel.Value += 1;
                 //show won popup

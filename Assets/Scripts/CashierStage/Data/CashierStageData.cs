@@ -9,7 +9,7 @@ namespace CashierStage.Data
         public ReactiveProperty<CharacterState> CashierState = new ReactiveProperty<CharacterState>();
         public Task CurrentAnimation;
         public int Pass;
-        public int Wons;
+        public ReactiveProperty<int> Wons = new ReactiveProperty<int>();
         public bool Loose;
     }
 }
