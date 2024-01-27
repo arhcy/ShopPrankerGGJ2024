@@ -41,21 +41,18 @@ namespace CashierStage.View
 
         public int CharacterId;
 
-        public void PlayAnimation(CharacterState state, bool isLoop, Action onComplete = null)
+        public void PlayAnimation(CharacterState state, bool isLoop)
         {
-            _skeletonAnimation.AnimationName = GetAnimName(state);
-
-            if (onComplete == null) return;
-
+            
+            var name = GetAnimName(state);
+            _skeletonAnimation.AnimationName = name;
             var animState = _skeletonAnimation.state;
-            animState.Complete += Completed;
-            _skeletonAnimation.loop = isLoop;
+            var animationObject = _skeletonAnimation.skeletonDataAsset.GetSkeletonData(false).FindAnimation(name);
 
-            void Completed(TrackEntry entry)
-            {
-                animState.Complete -= Completed;
-                onComplete?.Invoke();
-            }
+            if (animationObject != null)
+                animState.SetAnimation(0, animationObject, isLoop);
+
+            _skeletonAnimation.loop = isLoop;
         }
 
         public async Task PlayAnimationAsync(CharacterState state, float loopTime = -1)
