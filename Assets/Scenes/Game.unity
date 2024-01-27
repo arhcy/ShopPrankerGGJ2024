@@ -1719,6 +1719,17 @@ MonoBehaviour:
   image: {fileID: 922282143}
   BusketId: 0
   parentAfterDrug: {fileID: 0}
+--- !u!114 &976926816 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3056703567431281946, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
+  m_PrefabInstance: {fileID: 6074393612753876924}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &977903497 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4037812600937196559, guid: 4420cba465c13024d8e9055f771fed66, type: 3}
@@ -4999,6 +5010,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6153990198618731768, guid: 4420cba465c13024d8e9055f771fed66, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6554430987796924455, guid: 4420cba465c13024d8e9055f771fed66, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5024,6 +5039,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1555585389}
+    - target: {fileID: 3056703567431281946, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
+      propertyPath: loop
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3307930343008149443, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5116,8 +5135,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntroStage
       objectReference: {fileID: 0}
+    - target: {fileID: 7319991084921374481, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8474906326260208421, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534247551721607382, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
+      propertyPath: _animation
+      value: 
+      objectReference: {fileID: 976926816}
+    - target: {fileID: 8987471771089012338, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9009972233917403123, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
