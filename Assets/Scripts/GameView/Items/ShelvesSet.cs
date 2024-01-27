@@ -1,3 +1,4 @@
+using System;
 using GameView.Items;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,10 +9,12 @@ using static Cinemachine.DocumentationSortingAttribute;
 
 public class ShelvesSet : MonoBehaviour
 {
-    
+    public BasketView[] BasketViews;
     public List<GoodView> Goods;
     public Good_Repository good_rep;
-    
+
+
+
     public void Setup(int level)
     {
         var good = good_rep.Provide(level+1);

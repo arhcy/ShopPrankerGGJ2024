@@ -18,6 +18,8 @@ namespace GameView.Items
         private Vector3 _orginalPos;
         private Transform _originalParent;
 
+        public Action OnEndDragHappen;
+
         private void Awake()
         {
             _orginalPos = transform.position;
@@ -34,7 +36,7 @@ namespace GameView.Items
         public void OnBeginDrag(PointerEventData eventData)
         {
             Debug.Log("Begin drag");
-            parentAfterDrug = transform.parent;
+            parentAfterDrug = transform.parent.parent;
             transform.SetAsLastSibling();
             image.raycastTarget = false;
             BusketId = 0;
@@ -52,6 +54,8 @@ namespace GameView.Items
             Debug.Log("End drag");
             transform.SetParent(parentAfterDrug);
             image.raycastTarget = true;
+            
+            OnEndDragHappen.Invoke();
         }
 
         public void SetGood(GoodData goodData)
