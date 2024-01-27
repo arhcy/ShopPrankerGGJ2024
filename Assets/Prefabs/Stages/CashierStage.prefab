@@ -128,7 +128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &25375759079726700
 RectTransform:
   m_ObjectHideFlags: 0
@@ -282,9 +282,10 @@ MonoBehaviour:
   _goods: {fileID: 730847670522191340}
   _settings: {fileID: 11400000, guid: f3f5853488869be4aafdd980acaef9d8, type: 2}
   _cameraZoomController: {fileID: 0}
-  _slider: {fileID: 0}
+  _slider: {fileID: 2987447087308571166}
   _endLevelView: {fileID: 2633244668429503356}
   _totalWinView: {fileID: 8015460962405491005}
+  MockWin: 0
 --- !u!1 &1458971963818381811
 GameObject:
   m_ObjectHideFlags: 0

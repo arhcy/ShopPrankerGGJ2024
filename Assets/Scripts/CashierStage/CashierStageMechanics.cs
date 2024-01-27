@@ -43,6 +43,11 @@ namespace CashierStage
         [SerializeField]
         private GameObject _totalWinView;
 
+#if UNITY_EDITOR
+        [SerializeField]
+        private bool MockWin;
+#endif
+
         private GlobalGameData _globalGameData;
         private CashierStageData _data;
 
@@ -67,7 +72,12 @@ namespace CashierStage
         private async void RunMechanics()
         {
             ResetData();
-            //SetupMocks();
+
+#if UNITY_EDITOR
+            if (MockWin)
+                SetupMocks();
+#endif
+
 
             _data.Loose = false;
             _cashier.CharacterId = _globalGameData.PlayerLevel.Value;

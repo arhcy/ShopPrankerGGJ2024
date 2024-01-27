@@ -26,7 +26,6 @@ namespace GameView.Items
 
         public void ResetGood()
         {
-            Debug.LogError(_originalParent);
             if(_originalParent==null)return;
             transform.SetParent(_originalParent);
             transform.position = _orginalPos;

@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using CashierStage.Data;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 
@@ -29,13 +30,14 @@ namespace CashierStage.View
         private Transform[] _levelsBinder;
 
 
-        public Task SlideAsync(int level, bool immediate = false)
+        public async Task SlideAsync(int level, bool immediate = false)
         {
+            await UniTask.DelayFrame(2);
             InitBinder();
 
             _levelsBinder[level].DOPunchScale(Vector3.one * _settings.SliderMPunchMagnitude, _settings.SliderMPunchDuration, _settings.SliderMPunchVibration).SetDelay(_settings.SliderMoveTime);
 
-            return _slider.DOMoveX(_positionToLevelBinder[level].x, immediate ? 0 : _settings.SliderMoveTime).AsyncWaitForCompletion();
+            await _slider.DOMoveX(_positionToLevelBinder[level].x, immediate ? 0 : _settings.SliderMoveTime).AsyncWaitForCompletion();
 
             void InitBinder()
             {
