@@ -2568,7 +2568,7 @@ MonoBehaviour:
   _introPresenter: {fileID: 6074393612753876925}
   _cashierView: {fileID: 9191180188607545749}
   _cashierStageMechanics: {fileID: 9191180188607545754}
-  InitialStage: 3
+  InitialStage: 2
   InitFromStage: 1
 --- !u!4 &1272753512
 Transform:
