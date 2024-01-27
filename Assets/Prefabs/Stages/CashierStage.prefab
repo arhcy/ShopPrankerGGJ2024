@@ -128,7 +128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &25375759079726700
 RectTransform:
   m_ObjectHideFlags: 0
@@ -275,6 +275,7 @@ MonoBehaviour:
   - {fileID: 3459881291227288843}
   _goods: {fileID: 730847670522191340}
   _settings: {fileID: 11400000, guid: f3f5853488869be4aafdd980acaef9d8, type: 2}
+  _cameraZoomController: {fileID: 0}
 --- !u!1 &1458971963818381811
 GameObject:
   m_ObjectHideFlags: 0

@@ -57,6 +57,7 @@ namespace CashierStage
         private async void RunMechanics()
         {
             SetupMocks();
+            ResetData();
 
             _data.Loose = false;
             _cashier.CharacterId = _globalGameData.PlayerLevel.Value;
@@ -68,13 +69,11 @@ namespace CashierStage
                 basket.SetGoods(_globalGameData.Baskets[i].Goods.ToArray());
             }
 
-
             while (CanContinue)
             {
                 await MechanicsPass();
 
-                if (!_data.Loose)
-                    _data.Pass++;
+                _data.Pass++;
             }
 
             _globalGameData.GameStage.Value = GameStage.Intro;
@@ -104,6 +103,8 @@ namespace CashierStage
 
                 if (won)
                 {
+                    _data.Wons++;
+
                     if (Pass == GameSettings.TotalCashierPasses - 1)
                         await _cashier.PlayAnimationAsync(CharacterState.Laugh3_in);
 
@@ -119,6 +120,12 @@ namespace CashierStage
 
                 await _cameraZoomController.ZoomTween(1, _settings.CashierZoomDuraiton);
             }
+        }
+
+        private void ResetData()
+        {
+            _data.Pass = 0;
+            _data.Wons = 0;
         }
 
         private void SetupMocks()

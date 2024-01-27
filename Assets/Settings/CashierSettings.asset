@@ -21,5 +21,6 @@ MonoBehaviour:
   CashierLookTime: 3
   CashierLaughTime: 3
   CashierZoomDuraiton: 0.2
-  CashierZoomLevel: 5
+  CashierZoomLevel: 0.8
+  ZoomLooseDelay: 1.5
   GoodsUnpackDuration: 0.3
