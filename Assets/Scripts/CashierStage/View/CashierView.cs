@@ -53,17 +53,5 @@ namespace CashierStage.View
 
         private string GetAnimName(CharacterState state) =>
             _characterPrefixes[CharacterId] + _binders.First(a => a.State == state).AnimName;
-
-
-#if UNITY_EDITOR
-        public string AnimName;
-
-        [ContextMenu("Test")]
-        private void Test()
-        {
-            _skeletonAnimation.AnimationName = AnimName;
-        }
-
-#endif
     }
 }

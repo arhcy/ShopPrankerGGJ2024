@@ -18,12 +18,12 @@ namespace CashierStage.Model
             _gameData = gameData;
             _cashierData = cashierData;
 
-            _gameData.GameStage.Where(a => a == GameStage.Cashier).Subscribe(a => StageEntered());
+            /*_gameData.GameStage.Where(a => a == GameStage.Cashier).Subscribe(a => StageEntered());
 
             async void StageEntered()
             {
                 _cashierData.CashierState.Value = CharacterState.Idle;
-            }
+            }*/
         }
     }
 }

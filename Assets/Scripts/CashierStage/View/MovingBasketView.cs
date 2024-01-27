@@ -1,9 +1,11 @@
-﻿using System.Security.Cryptography;
+﻿using System;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using CashierStage.Data;
 using UnityEngine;
 using DG.Tweening;
 using Unity.VisualScripting;
+using Object = UnityEngine.Object;
 
 namespace CashierStage.View
 {
@@ -28,6 +30,8 @@ namespace CashierStage.View
 
         public void SetGoods(GoodData[] data)
         {
+            DestroyGoods();
+
             Goods = new PresentingGoodItem[data.Length];
 
             for (var i = 0; i < data.Length; i++)
@@ -54,8 +58,15 @@ namespace CashierStage.View
             await transform.DOPunchScale(Vector3.one * _cashierStageSettings.BasketAppearPunchMagnitude, _cashierStageSettings.BasketAppearPunchDuration, _cashierStageSettings.BasketAppearPunchVibration).AsyncWaitForCompletion();
             await transform.DOMove(_exitPos.position, _cashierStageSettings.BasketDisappearDuration).AsyncWaitForCompletion();
 
+            DestroyGoods();
+        }
+
+        private void DestroyGoods()
+        {
             foreach (var good in Goods)
                 Destroy(good.gameObject);
+
+            Goods = Array.Empty<PresentingGoodItem>();
         }
     }
 }

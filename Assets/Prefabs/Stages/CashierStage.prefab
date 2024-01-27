@@ -128,7 +128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &25375759079726700
 RectTransform:
   m_ObjectHideFlags: 0
@@ -258,7 +258,6 @@ MonoBehaviour:
   - State: 6
     AnimName: looking
   CharacterId: 0
-  AnimName: 
 --- !u!114 &6719541150828918464
 MonoBehaviour:
   m_ObjectHideFlags: 0

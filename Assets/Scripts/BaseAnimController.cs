@@ -39,7 +39,7 @@ public class BaseAnimController : MonoBehaviour
             _skeletonAnimation.loop = false;
             animState.Complete += Completed;
             animState.End += Completed;
-            animState.Interrupt += Completed;
+            animState.Interrupt -= Completed;
         }
         else
         {
@@ -60,7 +60,7 @@ public class BaseAnimController : MonoBehaviour
         {
             animState.Complete -= Completed;
             animState.End -= Completed;
-            animState.Interrupt += Completed;
+            animState.Interrupt -= Completed;
             completed = true;
         }
     }

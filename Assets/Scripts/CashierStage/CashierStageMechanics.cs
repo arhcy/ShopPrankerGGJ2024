@@ -47,7 +47,7 @@ namespace CashierStage
         private CashierStageData _data;
 
         private bool CanContinue =>
-            _data.Pass <= GameSettings.TotalCashierPasses && !_data.Loose;
+            _data.Pass <= GameSettings.TotalCashierPasses - 1 && !_data.Loose;
 
         private int Pass =>
             _data.Pass;
@@ -66,8 +66,8 @@ namespace CashierStage
 
         private async void RunMechanics()
         {
-            SetupMocks();
             ResetData();
+            //SetupMocks();
 
             _data.Loose = false;
             _cashier.CharacterId = _globalGameData.PlayerLevel.Value;
@@ -99,8 +99,13 @@ namespace CashierStage
             await _goods.PresentGoods(_baskets[Pass].Goods);
             await _cashier.PlayAnimationAsync(CharacterState.Looking, _settings.CashierLookTime);
             await SmileStage();
-            _cashier.PlayAnimation(CharacterState.Idle, true);
-            await _baskets[_data.Pass].MoveOut();
+
+            if (_data.Wons.Value < GameSettings.TotalCashierPasses)
+            {
+                _cashier.PlayAnimation(CharacterState.Idle, true);
+
+                await _baskets[_data.Pass].MoveOut();
+            }
 
 
             async Task SmileStage()
@@ -113,12 +118,18 @@ namespace CashierStage
 
                 if (won)
                 {
-                    _data.Wons.Value++;
+                    _data.Wons.Value = _data.Wons.Value + 1;
+                    var wons = _data.Wons.Value;
 
-                    if (Pass == GameSettings.TotalCashierPasses - 1)
+                    Debug.Log($"{Pass} {GameSettings.TotalCashierPasses - 1}");
+
+                    if (wons == GameSettings.TotalCashierPasses)
                         await _cashier.PlayAnimationAsync(CharacterState.Laugh3_in);
 
-                    await _cashier.PlayAnimationAsync(AnimToPassIdBind[Pass], _settings.CashierLaughTime);
+                    await _cashier.PlayAnimationAsync(AnimToPassIdBind[wons - 1], _settings.CashierLaughTime);
+
+                    if (wons == GameSettings.TotalCashierPasses)
+                        _cashier.PlayAnimation(CharacterState.Laugh3, true);
                 }
                 else
                 {
@@ -126,7 +137,9 @@ namespace CashierStage
                 }
 
                 if (!won)
+                {
                     await UniTask.Delay((int)(_settings.ZoomLooseDelay * 1000));
+                }
 
                 await _cameraZoomController.ZoomTween(1, _settings.CashierZoomDuraiton);
             }
@@ -141,8 +154,9 @@ namespace CashierStage
         private async Task ProcessFinalData()
         {
             await UniTask.Delay((int)(_settings.DelayBeforeFinal * 1000));
-        
+
             var won = _data.Wons.Value == GameSettings.TotalCashierPasses;
+            Debug.Log($"won: {won}");
 
             if (won)
             {
@@ -150,8 +164,8 @@ namespace CashierStage
 
                 if (_globalGameData.PlayerLevel.Value >= GameSettings.TotalLevels)
                 {
-                    
                     _totalWinView.gameObject.SetActive(true);
+
                     return;
                 }
             }
@@ -164,10 +178,17 @@ namespace CashierStage
         {
             //mocks
             var good = _repository.goods[0];
+            var good1 = _repository.goods[1];
+            var good2 = _repository.goods[2];
+            //_data.Pass = 2;
+            //_data.Wons.Value = 2;
             _globalGameData.Baskets = new[] { new BasketData(1), new BasketData(2), new BasketData(3) };
-            _globalGameData.Baskets[0].Goods.AddRange(new[] { good });
+            //_globalGameData.Baskets[0].Goods.AddRange(new[] { good });
+            //_globalGameData.Baskets[1].Goods.AddRange(new[] { good, good, good });
+            //_globalGameData.Baskets[2].Goods.AddRange(new[] { good, good });
+            _globalGameData.Baskets[0].Goods.AddRange(new[] { good, good, good });
             _globalGameData.Baskets[1].Goods.AddRange(new[] { good, good, good });
-            _globalGameData.Baskets[2].Goods.AddRange(new[] { good, good });
+            _globalGameData.Baskets[2].Goods.AddRange(new[] { good, good, good });
 
             //endmocks
         }

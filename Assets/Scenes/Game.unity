@@ -5012,6 +5012,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1555585389}
+    - target: {fileID: 3307930343008149443, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3313740797391020774, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5092,9 +5096,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3539095663325719269, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3579037033263712300, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
       propertyPath: m_Name
       value: IntroStage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579037033263712300, guid: 93fdfe6b3d683384680ab6252e49bfdd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
