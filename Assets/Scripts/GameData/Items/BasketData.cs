@@ -24,9 +24,8 @@ namespace GameData.Items
 
                 var bonus = GameSettings.WinBonus;
 
-                foreach (var item in found)
-                    if (item.IsFunny)
-                        bonus += GameSettings.AdditionalBonus;
+                foreach (var item in goods.Except(found))
+                    bonus += item.IsFunny ? GameSettings.AdditionalBonus : -GameSettings.AdditionalBonus;
 
                 return bonus;
             }
