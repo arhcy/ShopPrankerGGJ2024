@@ -76,6 +76,7 @@ namespace CashierStage
                 _data.Pass++;
             }
 
+            ProcessFinalData();
             _globalGameData.GameStage.Value = GameStage.Intro;
         }
 
@@ -126,6 +127,20 @@ namespace CashierStage
         {
             _data.Pass = 0;
             _data.Wons = 0;
+        }
+        
+        private void ProcessFinalData()
+        {
+            if (_data.Wons == GameSettings.TotalCashierPasses)
+            {
+                _globalGameData.PlayerLevel.Value += 1;
+                //show won popup
+                
+            }
+            else
+            {
+                //show loose popup
+            }
         }
 
         private void SetupMocks()
