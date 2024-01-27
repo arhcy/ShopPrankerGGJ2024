@@ -19,6 +19,9 @@ namespace CashierStage.Data
         [Header("Cashier:")]
         public float CashierLookTime = 3;
         public float CashierLaughTime = 3;
+        public float CashierZoomDuraiton = 3;
+        public float CashierZoomLevel = 3;
+        public float ZoomLooseDelay = 3;
         
         [Header("Goods:")]
         public float GoodsUnpackDuration = 1;

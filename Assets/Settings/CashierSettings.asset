@@ -20,4 +20,6 @@ MonoBehaviour:
   BasketDisappearDuration: 0.5
   CashierLookTime: 3
   CashierLaughTime: 3
+  CashierZoomDuraiton: 0.2
+  CashierZoomLevel: 5
   GoodsUnpackDuration: 0.3
