@@ -81,6 +81,7 @@ namespace CashierStage
 
             _data.Loose = false;
             _cashier.CharacterId = _globalGameData.PlayerLevel.Value;
+            _globalGameData.Attempts++;
 
             for (var i = 0; i < _baskets.Length; i++)
             {

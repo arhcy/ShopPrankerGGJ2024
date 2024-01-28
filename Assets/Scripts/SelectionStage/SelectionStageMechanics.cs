@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Cysharp.Threading.Tasks;
 using GameData;
 using GameView.Items;
 using UniRx;
@@ -19,18 +20,33 @@ namespace SelectionStage
         [SerializeField]
         private BasketView[] _basketViews;
 
+        [SerializeField]
+        private GameObject _reenterHint;
+
 
         public void Construct(GlobalGameData globalGameData)
         {
             globalGameData.PlayerLevel.Subscribe(_shelvesSet.Setup);
-            globalGameData.GameStage.Where(a => a == GameStage.Selection).Subscribe(a => _shelvesSet.Setup(globalGameData.PlayerLevel.Value));
-            globalGameData.GameStage.Where(a => a == GameStage.Selection).Subscribe(a => UpdateBasketsData());
+            globalGameData.GameStage.Where(a => a == GameStage.Selection).Subscribe(a => StageEnter());
 
             foreach (var good in Object.FindObjectsOfType<GoodView>(true))
                 good.OnEndDragHappen += UpdateBasketsData;
-            
+
             UpdateBasketsData();
-            
+
+            async void StageEnter()
+            {
+                _shelvesSet.Setup(globalGameData.PlayerLevel.Value);
+                UpdateBasketsData();
+
+                if (globalGameData.Attempts > 0 && globalGameData.PlayerLevel.Value == 0)
+                {
+                    _reenterHint.gameObject.SetActive(true);
+                    await UniTask.Delay(1000);
+                    await UniTask.WaitUntil(() => Input.GetMouseButton(0));
+                    _reenterHint.gameObject.SetActive(false);
+                }
+            }
 
             void UpdateBasketsData()
             {
