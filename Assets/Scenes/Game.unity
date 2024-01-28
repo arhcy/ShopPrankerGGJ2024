@@ -295,7 +295,7 @@ MonoBehaviour:
   _cashierView: {fileID: 9191180188607545749}
   _cashierStageMechanics: {fileID: 9191180188607545754}
   _selectionStageMechanics: {fileID: 755605193}
-  InitialStage: 2
+  InitialStage: 0
   InitFromStage: 1
 --- !u!4 &1272753512
 Transform:
