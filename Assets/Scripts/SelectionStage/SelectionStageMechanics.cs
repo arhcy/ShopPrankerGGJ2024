@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using GameData;
 using GameView.Items;
@@ -23,6 +24,9 @@ namespace SelectionStage
         [SerializeField]
         private GameObject _reenterHint;
 
+        [SerializeField]
+        private BaseCanvasAnimController _tutor;
+
 
         public void Construct(GlobalGameData globalGameData)
         {
@@ -45,6 +49,25 @@ namespace SelectionStage
                     await UniTask.Delay(1000);
                     await UniTask.WaitUntil(() => Input.GetMouseButton(0));
                     _reenterHint.gameObject.SetActive(false);
+                }
+                
+                if (globalGameData.Attempts == 0 && globalGameData.PlayerLevel.Value == 0)
+                {
+                    _tutor.gameObject.SetActive(true);
+
+                    await PlayTutorStep("hint_1");
+                    await PlayTutorStep("hint_2");
+                    await PlayTutorStep("hint_3");
+                    
+                    _tutor.gameObject.SetActive(false);
+
+                    async Task PlayTutorStep(string name)
+                    {
+                        await _tutor.PlayAnimationAsync(name);
+                        await UniTask.Delay(1000);
+                        await UniTask.WaitUntil(() => Input.GetMouseButton(0));
+                    }
+
                 }
             }
 
